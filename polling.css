@@ -1,0 +1,10 @@
+/* CSS declarations go here */
+.form-div{
+    padding: 15px 10px;
+    overflow: auto;
+    /*display: none;*/
+}
+
+h1{
+    padding-bottom: 20px;
+}
