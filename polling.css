@@ -1,10 +1,24 @@
 /* CSS declarations go here */
-.form-div{
-    padding: 15px 10px;
-    overflow: auto;
-    /*display: none;*/
-}
 
 h1{
     padding-bottom: 20px;
+}
+
+#login-buttons{
+    float: right !important;
+}
+
+
+.login-display-name{
+    font-size: 25px;
+}
+
+#login-buttons .single-login-button{
+    font-size: 50%;
+    background: #009688;
+}
+
+
+#login-buttons .single-login-button:hover{
+    background: #009688;
 }

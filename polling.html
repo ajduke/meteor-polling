@@ -8,21 +8,24 @@
 
 <template name="main">
   <div class="container">
-    <h1>Meteor Polling App</h1>
-    {{> form}}
+    <h1>MTP Polling App {{>loginButtons}}</h1>
+    {{#if currentUser}}
+      {{> form}}
+    {{/if}}
     {{> grid}}
   </div>
 
 </template>
 
 <template name="form">
-  <div class="well form-div">
+  <div class="well">
     <form class="form-horizontal ques-form" >
       <fieldset>
         <legend>Enter Poll Data</legend>
         <div class="form-group">
           <div class="col-sm-10">
-            <textarea name="ques" id="" cols="40" rows="3" placeholder="Ask your question"></textarea>
+            <input type="text" class="form-control" id="ques" placeholder="Enter Question"/>
+            <!--<textarea name="ques" id="" cols="40" rows="3" placeholder="Ask your question"></textarea>-->
           </div>
         </div>
 
@@ -53,8 +56,8 @@
           <div class="thumbnail">
             <div class="caption">
               <h3>{{question}}?</h3>
-              <p><a class="btn btn-default ch-btn" data-choice-id="1"> {{choice1.text}} <span class="badge">{{choice1.score}}</span></a></p>
-              <p><a class="btn btn-default ch-btn" data-choice-id="2"> {{choice2.text}} <span class="badge">{{choice2.score}}</span> </a></p>
+              <p><a class="btn btn-primary ch-btn" data-choice-id="1"> {{choice1.text}} <span class="badge">{{choice1.score}}</span></a></p>
+              <p><a class="btn btn-info ch-btn" data-choice-id="2"> {{choice2.text}} <span class="badge">{{choice2.score}}</span> </a></p>
             </div>
           </div>
         </div>

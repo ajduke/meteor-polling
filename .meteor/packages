@@ -9,3 +9,6 @@ autopublish
 insecure
 fezvrasta:bootstrap-material-design
 coffeescript
+accounts-twitter
+accounts-base
+accounts-ui

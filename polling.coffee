@@ -1,4 +1,4 @@
-Poll = new Mongo.Collection('poll')
+@Poll = new Mongo.Collection('poll')
 
 if Meteor.isClient
   Template.form.events(
@@ -8,10 +8,13 @@ if Meteor.isClient
       ch1= $('#choice1').val()
       ch2= $('#choice2').val()
 
+      if question isnt "" || ch1 isnt "" || ch2 isnt ""
       # actually insert the form
-      Poll.insert({question:question, choice1: {text: ch1, score:0}, choice2: {text: ch2, score:0}})
-      # reset the form
-      event.target.reset()
+        Poll.insert({question:question, choice1: {text: ch1, score:0}, choice2: {text: ch2, score:0}})
+        # reset the form
+        event.target.reset()
+      else
+        alert("Opps!! Thats No")
   )
 
   Template.grid.helpers(
